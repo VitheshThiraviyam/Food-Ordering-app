@@ -36,9 +36,13 @@
     font-size: max(1.4vw,16px);
     cursor: pointer;
 }
-.explore-menu hr{[
+.explore-menu hr{
     margin: 10px 0px;
     height: 2px;
     background-color: grey;
     border: none;
-]}
+}
+.explore-menu-list-item .active{
+    border: 3px solid tomato;
+    box-shadow: 0 0 10px rgba(255, 99, 71, 0.5);
+}

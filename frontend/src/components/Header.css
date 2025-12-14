@@ -6,6 +6,7 @@
     position: relative;
 }
 
+
 .Header-contents{
     position: absolute;
     display: flex;
@@ -17,22 +18,95 @@
     left: 6vw;
     animation: fadeIn 1.2s ease-in-out forwards;
 }
+
 .Header-contents h2{
     font-weight: 500;
     color: white;
     font-size: max(4.5vw,22px);
 }
+
 .Header-contents p{
     color: white;
     font-size: 1vw;
 }
+
 .Header-contents button{
-    background: none;
     color: grey;
     border: none;
-    font-weight:500;
+    font-weight: 500;
     padding: 1vw 2.3vw;
     background-color: white;
     font-size: max(1vw,13px);
     border-radius: 50px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 1050px) {
+    .Header{
+        height: 38vw;
+    }
+
+    .Header-contents{
+        max-width: 55%;
+        gap: 1.8vw;
+    }
+
+    .Header-contents p{
+        font-size: 1.2vw;
+    }
+}
+
+/* ================= 900px ================= */
+
+@media (max-width: 900px) {
+    .Header{
+        height: 42vw;
+        background-size: cover;
+    }
+
+    .Header-contents{
+        max-width: 65%;
+        bottom: 8%;
+    }
+
+    .Header-contents h2{
+        font-size: max(5vw,20px);
+    }
+
+    .Header-contents p{
+        font-size: 1.6vw;
+    }
+
+    .Header-contents button{
+        padding: 1.3vw 3vw;
+    }
+}
+
+@media (max-width: 700px) {
+    .Header{
+        height: 55vw;
+        margin: 20px auto;
+    }
+
+    .Header-contents{
+        max-width: 90%;
+        left: 5%;
+        bottom: 6%;
+        gap: 12px;
+    }
+
+    .Header-contents h2{
+        font-size: 22px;
+    }
+
+    .Header-contents p{
+        font-size: 14px;
+        display: none;
+    }
+
+    .Header-contents button{
+        padding: 10px 22px;
+        font-size: 14px;
+    }
 }

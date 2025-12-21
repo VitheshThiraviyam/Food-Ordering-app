@@ -1,0 +1,92 @@
+.place-order {
+    max-width: 1200px;
+    margin: 100px auto;
+    display: flex;
+    gap: 40px;
+    padding: 20px;
+  }
+  
+  .place-order-left {
+    flex: 2;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+  }
+  
+  .place-order-right {
+    flex: 1;
+  }
+  
+  .title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  .place-order-left input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    outline: none;
+  }
+  
+  .place-order-left input:focus {
+    border-color: #ff4c24;
+  }
+  
+  .multiple-feilds {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .cart-total {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+  }
+  
+  .cart-detials-total {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0;
+    font-size: 16px;
+  }
+  
+  .cart-total hr {
+    border: none;
+    height: 1px;
+    background: #e5e5e5;
+  }
+  
+  .cart-total button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    background: #ff4c24;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .cart-total button:hover {
+    background: #e8431f;
+  }
+  
+  @media (max-width: 900px) {
+    .place-order {
+      flex-direction: column;
+    }
+  
+    .multiple-feilds {
+      flex-direction: column;
+    }
+  }
+  

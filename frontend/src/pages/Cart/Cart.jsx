@@ -2,9 +2,11 @@ import React, { useContext, useState } from 'react';
 import './Cart.css';
 import { StoreContext } from '../../context/StoreContext';
 import { assets } from '../../assets/assets';
+import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
-  const { cartItems, food_list, removeFromCart } = useContext(StoreContext);
+  const { cartItems, food_list, removeFromCart, getTotalAmount } = useContext(StoreContext);
+  const navigate = useNavigate();
   return (
     <div className='cart'>
       <div className="cart-items">
@@ -35,6 +37,36 @@ const Cart = () => {
             )
           }
         })}
+      </div>
+      <div className='cartbottom'>
+        <div className="cart-total">
+          <div>
+            <div className="cart-detials-total">
+              <p>Subtotal</p>
+              <b>{getTotalAmount()}</b>
+            </div>
+            <hr/>
+            <div className="cart-detials-total">
+              <p>DeliveryFee</p>
+              <p>{2}</p>
+            </div>
+            <hr/>
+            <div className="cart-detials-total">
+              <p>Total</p>
+              <b>{getTotalAmount()+2}</b>
+            </div>
+          </div>
+          <button onClick={()=>navigate('/order')}>PROCEED TO CHECKOUT</button>
+        </div>
+        <div className="cart-promo-code">
+          <div>
+            <p>If you have a promo code</p>
+            <div className="cart-promo-input">
+              <input type='text' placeholder='Enter your promo code' required></input>
+              <button>APPLY</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )

@@ -1,0 +1,59 @@
+.slidebar {
+    width: 240px;
+    height: calc(100vh - 70px);
+    background-color: #ffffff;
+    border-right: 1px solid #e5e5e5;
+    padding-top: 20px;
+    position: relative;
+    transition: width 0.3s ease;
+  }
+  
+  .slidebar-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .slidebar-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .slidebar-option:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .slidebar-option img {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .slidebar-option p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin: 0;
+  }
+  
+  @media (max-width: 1024px) {
+    .slidebar {
+      width: 80px;
+    }
+  
+    .slidebar-option {
+      justify-content: center;
+    }
+  
+    .slidebar-option p {
+      display: none;
+    }
+  }
+  @media (max-width: 768px) {
+    .slidebar {
+      left: 0;
+    }
+  }
+  
